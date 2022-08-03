@@ -19,6 +19,7 @@ export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState(Status.IDLE);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const [hits, setHits] = useState(null);
   const [results, setResults] = useState(null);
@@ -76,6 +77,7 @@ export function App() {
     if (searchQuery) {
       getResponse();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery, page]);
 
   const PENDING = status === 'pending';
